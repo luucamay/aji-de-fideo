@@ -1,0 +1,26 @@
+{
+  "desayuno": [
+    {
+      "name": "cafe americano",
+      "price": 500
+    },
+    {
+      "name": "cafe con leche",
+      "price": 700
+    },
+    {
+      "name": "cafe americano",
+      "price": 1000
+    },
+    {
+      "name": "cafe americano",
+      "price": 700
+    }
+  ],
+  "almuerzo": [
+    {
+      "name": "hamburguesa",
+      "price": 1000
+    }
+  ]
+}
