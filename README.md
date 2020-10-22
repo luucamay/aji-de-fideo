@@ -16,6 +16,8 @@ This project is made with React and Firebase
 * [Loreto](https://github.com/Carlareneedc/SCL013-burger-queen)
 
 ## Questions
+* If a client made a pedido can this client make a different one? Probably yes, and probably there should be a way to list client petitions
+* 
 
 ## Insights
 Cloud functions is optional
