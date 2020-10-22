@@ -1,8 +1,15 @@
 # Aji de Fideo
 This project is made with React and Firebase
 
+## UX process
+* Great looking example and color scheme
+<img src="https://cdn.dribbble.com/users/22878/screenshots/7898576/media/a3122be370eb438f34032cac7510a4bd.png"/>
+
 ## Resources to share learning path
-### Watch react implementations scl013
+* [Uber Eats Case of Study](https://www.metalab.co/projects/uber?utm_source=dribbble&utm_medium=cpc&utm_campaign=sponsored_shot&utm_content=uber)
+* [Uber Eats website](https://www.ubereats.com/new-york/food-delivery/)
+
+## Watch react implementations scl013
 * [Constanza Laf](https://github.com/Kthcsk/SCL013-burger-queen)
 * [Fer Montecinos](https://github.com/montecinosc/SCL013-burger-queen)
 * [Genesis](https://github.com/GenesisAstete/SCL013-burger-queen)
