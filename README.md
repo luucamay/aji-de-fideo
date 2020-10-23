@@ -7,7 +7,9 @@ This project is made with React and Firebase
 
 ## Resources to share learning path
 * [Uber Eats Case of Study](https://www.metalab.co/projects/uber?utm_source=dribbble&utm_medium=cpc&utm_campaign=sponsored_shot&utm_content=uber)
-* [Uber Eats website](https://www.ubereats.com/new-york/food-delivery/)
+* [Uber Eats website](https://www.ubereats.com/category/new-york-city/pizza)
+* [A button is not a button, a lesson about buttons](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)
+* [Differences between article vs section](http://html5doctor.com/)
 
 ## Watch react implementations scl013
 * [Constanza Laf](https://github.com/Kthcsk/SCL013-burger-queen)

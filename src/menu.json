@@ -1,23 +1,23 @@
 {
-  "desayuno": [
+  "breakfast": [
     {
       "name": "cafe americano",
-      "price": 500
+      "price": 525
     },
     {
       "name": "cafe con leche",
-      "price": 700
+      "price": 750
     },
     {
-      "name": "cafe americano",
+      "name": "sandwich de jamon y queso",
       "price": 1000
     },
     {
-      "name": "cafe americano",
+      "name": "jugo de frutas natural",
       "price": 700
     }
   ],
-  "almuerzo": [
+  "lunch": [
     {
       "name": "hamburguesa",
       "price": 1000

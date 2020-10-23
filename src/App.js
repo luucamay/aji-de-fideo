@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import menu from './menu.json';
+import Product from './Product';
+
 
 function App() {
+  const addProduct = (prodName, prodPrice) => {
+    console.log(prodName, prodPrice);
+  }
+  const breakfastProducts = menu.breakfast.map((product) => <Product name={product.name} price={product.price} addProduct={addProduct} />);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="Menu">
+        <h1>Breakfast</h1>
+        <div className="Products">
+          {breakfastProducts}
+        </div>
+      </section>
     </div>
   );
 }
