@@ -1,0 +1,18 @@
+.App, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App, input, button {
+  text-align: center;
+  font-size: 14px;
+}
+
+.Menu {
+  background-color: wheat;
+  width: 50%;
+}
+.Products {
+  display: flex;
+  flex-wrap: wrap;
+}
