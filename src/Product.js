@@ -1,9 +1,9 @@
 import React from 'react';
 import './Product.css';
+import { moneyToString } from './App';
 
 function Product(props) {
-  let priceStr = props.price.toString();
-  priceStr = priceStr.slice(0, -2) + '.' + priceStr.slice(-2);
+  const priceStr = moneyToString(props.price);
   return (
     <div className="product">
       <h3>{props.name}</h3>

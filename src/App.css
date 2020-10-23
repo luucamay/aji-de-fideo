@@ -8,6 +8,10 @@
   font-size: 14px;
 }
 
+.App {
+  display: flex;
+}
+
 .Menu {
   background-color: wheat;
   width: 50%;
