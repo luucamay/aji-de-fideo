@@ -19,7 +19,7 @@ This project is made with React and Firebase
 
 ## Questions
 * If a client made a pedido can this client make a different one? Probably yes, and probably there should be a way to list client petitions
-* 
+* When do I use the prop onContext?
 
 ## Insights
 Cloud functions is optional

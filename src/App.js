@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import './App.css';
 import menu from './menu.json';
-import Pedido from './Pedido';
+import PedidoProduct from './PedidoProduct';
 import Product from './Product';
 
 
 function App() {
-  const [pedidoList, setPedido] = useState([]);
+  const [pedidoObj, setPedido] = useState({ "pedidoList": [], "total": 0, "totalStr": "0.00" });
+  console.log([pedidoObj.pedidoList]);
   const addProduct = (prodName, prodPrice) => {
     // goals: recibe a product, updates state of arrayOfProducts into the Pedido
-    const newProduct = { name: prodName, price: prodPrice }
+    const newProduct = { id: pedidoObj.pedidoList.length + 1, name: prodName, price: prodPrice }
     // updatePedido();
-    const newPedido = [...pedidoList, newProduct];
-    setPedido(newPedido);
-
+    const pedidoList = [...pedidoObj.pedidoList, newProduct];
+    const total = calcTotal(pedidoList);
+    const totalStr = moneyToString(total);
+    setPedido({ pedidoList, total, totalStr });
+  }
+  const removeProduct = (prodId) => {
+    const pedidoList = pedidoObj.pedidoList.filter(pedidoProduct => pedidoProduct.id !== prodId)
+    const total = calcTotal(pedidoList);
+    const totalStr = moneyToString(total);
+    setPedido({ pedidoList, total, totalStr });
   }
   const breakfastProducts = menu.breakfast.map((product) => <Product name={product.name} price={product.price} addProduct={addProduct} />);
+  const pedidoProducts = pedidoObj.pedidoList.map((pedidoProd, index) => <PedidoProduct key={index} id={pedidoProd.id} name={pedidoProd.name} price={pedidoProd.price} removeProduct={removeProduct} />);
 
   return (
     <div className="App">
@@ -25,7 +34,11 @@ function App() {
           {breakfastProducts}
         </div>
       </section>
-      <Pedido listProducts={pedidoList} />
+      <section className="Pedido">
+        {pedidoProducts}
+        <p>Total $ {pedidoObj.totalStr}</p>
+        <button>Enviar a cocina</button>
+      </section>
     </div>
   );
 }
@@ -38,6 +51,8 @@ export function moneyToString(number) {
   moneyStr = moneyStr.slice(0, -2) + '.' + moneyStr.slice(-2);
   return moneyStr;
 }
+
+const calcTotal = (products) => products.reduce((accumulator, currentValue) => (accumulator + currentValue.price), 0);
 
 export default App;
 
