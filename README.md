@@ -10,9 +10,12 @@ This project is made with React and Firebase
 * [Uber Eats website](https://www.ubereats.com/category/new-york-city/pizza)
 * [A button is not a button, a lesson about buttons](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)
 * [Differences between article vs section](http://html5doctor.com/)
+* [React TO DO App with firebase functions](https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/)
+*
 
 ## Watch react implementations scl013
-* [Constanza Laf](https://github.com/Kthcsk/SCL013-burger-queen)
+* [Constanza Laf - angular](https://github.com/Kthcsk/SCL013-burger-queen)
+* [Constanza Valeria - react](https://github.com/valeriaconstanzabc/SCL013-burger-queen)
 * [Fer Montecinos](https://github.com/montecinosc/SCL013-burger-queen)
 * [Genesis](https://github.com/GenesisAstete/SCL013-burger-queen)
 * [Loreto](https://github.com/Carlareneedc/SCL013-burger-queen)
