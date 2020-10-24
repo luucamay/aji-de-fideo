@@ -20,3 +20,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+form {
+  background-color: gray;
+  padding: 1em;
+}
