@@ -8,6 +8,10 @@
   font-size: 14px;
 }
 
+.App {
+  display: flex;
+}
+
 .Menu {
   background-color: wheat;
   width: 50%;
@@ -15,4 +19,9 @@
 .Products {
   display: flex;
   flex-wrap: wrap;
+}
+
+form {
+  background-color: gray;
+  padding: 1em;
 }
