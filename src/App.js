@@ -26,8 +26,6 @@ function App() {
 
   const successMessage = (response) => {
     // create a dialog box
-    const result = window.confirm("Do you really want to leave?");
-    if (result) console.log('yes!');
     alert('Pedido successfully sent');
     setPedido({ "pedidoList": [], "total": 0 });
     document.createPedidoForm.clientName.value = '';
