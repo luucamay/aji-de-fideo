@@ -8,6 +8,7 @@ import {
 import './App.css';
 import Waiter from './Waiter';
 import Chef from './Chef';
+import ReadyPedidoList from './PedidosReady';
 
 export default function App() {
   return (
@@ -17,6 +18,9 @@ export default function App() {
           <ul>
             <li>
               <Link to="/waiter">Waiter</Link>
+            </li>
+            <li>
+              <Link to="/pedidosReady">Pedidos ready to deliver</Link>
             </li>
             <li>
               <Link to="/chef">Chef</Link>
@@ -32,6 +36,9 @@ export default function App() {
           </Route>
           <Route path="/waiter">
             <Waiter />
+          </Route>
+          <Route path="/pedidosReady">
+            <ReadyPedidoList />
           </Route>
           <Route path="/">
             <Waiter />
