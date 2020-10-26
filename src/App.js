@@ -10,18 +10,30 @@ function App() {
 
   const sendToKitchen = () => {
     // TO DO show modal to check order summary before send
-    if (pedidoObj.pedidoList.length > 0) {
+    const clientName = document.createPedidoForm.clientName.value;
+    if (pedidoObj.pedidoList.length > 0 && clientName.length > 0) {
       const firestore = firebase.firestore();
-      const clientName = document.createPedidoForm.clientName.value;
       firestore.collection("pedidos").add({
         ...pedidoObj,
         clientName,
         "status": "enviado",
         "timestamp": firebase.firestore.FieldValue.serverTimestamp()
-      }).then(console.log);
+      }).then(successMessage, errorMessage);
     } else {
-      console.log("Please, add some products to the pedido");
+      alert("Please, add some products to the pedido or add clients name");
     }
+  }
+
+  const successMessage = (response) => {
+    // create a dialog box
+    const result = window.confirm("Do you really want to leave?");
+    if (result) console.log('yes!');
+    alert('Pedido successfully sent');
+    setPedido({ "pedidoList": [], "total": 0 });
+    document.createPedidoForm.clientName.value = '';
+  }
+  const errorMessage = (err) => {
+    alert(err.message);
   }
 
   const addProduct = (prodName, prodPrice) => {
