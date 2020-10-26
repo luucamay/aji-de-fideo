@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Pedido.css';
-import { moneyToString } from './App';
+import { moneyToString } from './lib/util';
 
 function PedidoProduct(props) {
   const priceStr = moneyToString(props.price);
