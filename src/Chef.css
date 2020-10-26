@@ -1,0 +1,12 @@
+.pedidoCard {
+  background-color: indianred;
+  padding: 1em;
+  margin: 1em;
+  width: 15em;
+}
+
+.pedidoCards {
+  background-color: indigo;
+  display: flex;
+  flex-wrap: wrap;
+}

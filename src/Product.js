@@ -1,6 +1,6 @@
 import React from 'react';
 import './Product.css';
-import { moneyToString } from './App';
+import { moneyToString } from './lib/util';
 
 function Product(props) {
   const priceStr = moneyToString(props.price);
