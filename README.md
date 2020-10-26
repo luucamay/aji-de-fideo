@@ -11,7 +11,10 @@ This project is made with React and Firebase
 * [A button is not a button, a lesson about buttons](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)
 * [Differences between article vs section](http://html5doctor.com/)
 * [React TO DO App with firebase functions](https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/)
-*
+* [Create a simple modal](https://www.digitalocean.com/community/tutorials/react-modal-component)
+* [About useEffect](https://www.digitalocean.com/community/tutorials/react-replacing-component-lifecycles-with-useeffect)
+* [Get Data from Firestore](https://dev.to/vetswhocode/build-a-crud-firestore-app-in-react-gatsby-with-hooks-4ig9#display-data)
+
 
 ## Watch react implementations scl013
 * [Constanza Laf - angular](https://github.com/Kthcsk/SCL013-burger-queen)
