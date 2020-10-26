@@ -16,7 +16,7 @@ function Waiter(props) {
       firestore.collection("pedidos").add({
         ...pedidoObj,
         clientName,
-        "status": "enviado",
+        "status": "sent",
         "timestamp": firebase.firestore.FieldValue.serverTimestamp()
       }).then(successMessage, errorMessage);
     } else {

@@ -10,6 +10,7 @@ const usePendingPedidos = () => {
     const unsubscribe = firebase
       .firestore()
       .collection("pedidos")
+      .where("status", "==", "sent")
       .orderBy("timestamp")
       .onSnapshot(snapshot => {
         const listPendingPedidos = snapshot.docs.map(doc => ({
@@ -22,6 +23,10 @@ const usePendingPedidos = () => {
     return () => unsubscribe()
   }, [])
   return pendingPedidos
+}
+
+const changePedidoStatus = (pedidoId) => {
+  console.log(pedidoId);
 }
 
 const PendingPedidoList = () => {
@@ -38,7 +43,7 @@ const PendingPedidoList = () => {
             pendingPedido.pedidoList.map((product) => (<li>{product.name}</li>))
           }
         </ul>
-        <button>Ready to deliver</button>
+        <button onClick={() => changePedidoStatus(pendingPedido.id)}>Ready to deliver</button>
       </div>
     )
   })
