@@ -12,12 +12,12 @@ function Waiter(props) {
     // TO DO show modal to check order summary before send
     const clientName = document.createPedidoForm.clientName.value;
     if (pedidoObj.pedidoList.length > 0 && clientName.length > 0) {
-      const firestore = firebase.firestore();
-      firestore.collection("pedidos").add({
+      const db = firebase.firestore();
+      db.collection("pedidos").add({
         ...pedidoObj,
         clientName,
         "status": "sent",
-        "timestamp": firebase.firestore.FieldValue.serverTimestamp()
+        "timestamp": new Date()
       }).then(successMessage, errorMessage);
     } else {
       alert("Please, add some products to the pedido or add clients name");

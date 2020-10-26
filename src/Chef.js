@@ -25,25 +25,42 @@ const usePendingPedidos = () => {
   return pendingPedidos
 }
 
-const changePedidoStatus = (pedidoId) => {
-  console.log(pedidoId);
+const pedidoReady = (pedidoId, timeSentKitchen) => {
+  const db = firebase.firestore();
+  const pedidoRef = db.collection("pedidos").doc(pedidoId);
+  const timeReady = new Date();
+  const msMinute = 60*1000, msDay = 60*60*24*1000;
+  const preparationTime = Math.floor(((timeReady - timeSentKitchen.toDate()) % msDay) / msMinute);
+
+  return pedidoRef.update({
+    status: "ready",
+    timeReady,
+    preparationTime
+  })
+    .then(function () {
+      console.log("Document successfully updated!");
+      alert('Time pedido completed was: ' + preparationTime + ' mins');
+    })
+    .catch(function (error) {
+      console.error("Error updating document: ", error);
+    });
 }
 
 const PendingPedidoList = () => {
   const listPendingPedido = usePendingPedidos();
   const pendingPedidoCards = listPendingPedido.map(pendingPedido => {
-    const hourSend = moment(pendingPedido.timestamp.toDate()).format('LT');
+    const hourArrived = moment(pendingPedido.timestamp.toDate()).format('LT');
     return (
       <div className="pedidoCard">
         <p>Client: <strong>{pendingPedido.clientName}</strong></p>
-        <p>Hour: {hourSend}</p>
+        <p>Hour arrived to kitchen: {hourArrived}</p>
         <h3>Pedido's detail</h3>
         <ul>
           {
             pendingPedido.pedidoList.map((product) => (<li>{product.name}</li>))
           }
         </ul>
-        <button onClick={() => changePedidoStatus(pendingPedido.id)}>Ready to deliver</button>
+        <button onClick={() => pedidoReady(pendingPedido.id, pendingPedido.timestamp)}>Ready to deliver</button>
       </div>
     )
   })
