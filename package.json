@@ -34,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "firebase": "^7.24.0"
+    "firebase": "^7.24.0",
+    "react-test-renderer": "^17.0.1"
   }
 }
