@@ -14,7 +14,11 @@ This project is made with React and Firebase
 * [Create a simple modal](https://www.digitalocean.com/community/tutorials/react-modal-component)
 * [About useEffect](https://www.digitalocean.com/community/tutorials/react-replacing-component-lifecycles-with-useeffect)
 * [Get Data from Firestore](https://dev.to/vetswhocode/build-a-crud-firestore-app-in-react-gatsby-with-hooks-4ig9#display-data)
+* [About PWA](https://medium.com/better-programming/build-a-realtime-pwa-with-react-99e7b0fd3270)
 
+### Resources about testing React Apps
+* Official docs
+* [Practical guide to test React](https://www.smashingmagazine.com/2020/06/practical-guide-testing-react-applications-jest/)
 
 ## Watch react implementations scl013
 * [Constanza Laf - angular](https://github.com/Kthcsk/SCL013-burger-queen)
